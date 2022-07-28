@@ -27,7 +27,7 @@ export default function Login({ navigation }) {
                     </IconAbs>
                 </Hiden>
                 <AreaButton>
-                    <Button text="ACESSAR" background={Colors.blueStrong} color={Colors.white} />
+                    <Button text="ACESSAR" background={Colors.blueStrong} color={Colors.white} onPress={ ()=> navigation.navigate('Home') } />
                 </AreaButton>
                 <Account>
                     <Button text="Esqueci minha senha" background={Colors.blueStrong} color={Colors.white} />

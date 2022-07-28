@@ -1,9 +1,9 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-export default function Contact({navigation}){
+export default function Contact({ navigation }) {
 
-    return(
+    return (
         <View>
             <Text>Contact</Text>
         </View>

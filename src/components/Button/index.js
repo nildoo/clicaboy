@@ -1,7 +1,6 @@
 import React from 'react';
 import { ActivityIndicator } from "react-native";
 import styled from 'styled-components/native';
-import { Colors } from '../../constants/Colors';
 
 export default function Button({ text, onPress, loading, background, color }) {
 
@@ -11,7 +10,7 @@ export default function Button({ text, onPress, loading, background, color }) {
         {loading ? (
           <ActivityIndicator color='#FFF' size='large' />
         ) : (
-          <ButtonText style={{fontFamily: 'Arboria-Bold', color: color}}>{text}</ButtonText>
+          <ButtonText style={{color: color}}>{text}</ButtonText>
         )}
       </Touchable>
     </Container>
@@ -26,7 +25,6 @@ const Container = styled.View`
   justify-content: center;
   margin-bottom: 20px;
 `
-
 const Touchable = styled.TouchableOpacity`
   display: flex;
   width: 100%;
@@ -35,7 +33,6 @@ const Touchable = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
 `
-
 const ButtonText = styled.Text`
-  font-size: 14px;
+  font-size: 12px;
 `
