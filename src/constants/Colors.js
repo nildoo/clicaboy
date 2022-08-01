@@ -6,5 +6,6 @@ export const Colors = {
     boxDistance: "#FFFFA5",
     redSupport: "#CE0B0B",
     inputIcon: "#B9A8CD",
+    boxCard: "#e9e9e9",
     white: "#fff"
 }

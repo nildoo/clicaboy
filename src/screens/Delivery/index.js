@@ -1,26 +1,34 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, View, Text, Image } from "react-native";
-import { Container, Header, Bars, LabelPage, Title, ImageBottom } from "./styles";
+import { SafeAreaView, ScrollView, View, Text, Image } from "react-native";
+import { Container, Header, Bars, LabelPage, Title, Content, Imagem } from "./styles";
 import { Colors } from "../../constants/Colors";
-import { Octicons } from '@expo/vector-icons';
+import CardDelivery from "../../components/Card";
+import { AntDesign } from '@expo/vector-icons';
 
-export default function Delivery({navigation}) {
+export default function Delivery({ navigation }) {
 
     return (
         <SafeAreaView style={{ flex: 1, alignItems: "center", backgroundColor: Colors.white }}>
             <Container>
                 <Header>
-                    <Bars>
-                        <Octicons name="three-bars" size={32} color={Colors.blueInput} />
+                    <Bars onPress={() => navigation.navigate('Account')}>
+                    <AntDesign name="arrowleft" size={32} color={Colors.blueInput} onPress={() => navigation.goBack()} />
                     </Bars>
                     <LabelPage>
-                        <Title style={{fontFamily: "Arboria-Bold"}}>Minhas entregas</Title>
+                        <Title style={{ fontFamily: "Arboria-Bold", color: Colors.blueInput}}>Minhas entregas</Title>
                     </LabelPage>
                 </Header>
-                <ImageBottom>
-                    <Image source={require('../../assets/image/rodape_fundobranco.png')} resizeMode="cover" style={{ width: 440, height: 254 }} />
-                </ImageBottom>
+                <ScrollView showsVerticalScrollIndicator={false}>
+                    <CardDelivery />
+                    <CardDelivery />
+                    <CardDelivery />
+                    <CardDelivery />
+                    <CardDelivery />
+                    <CardDelivery />
+                    <CardDelivery />
+                </ScrollView>
+                <Imagem source={require('../../assets/image/city-bike.png')} />
             </Container>
             <StatusBar style="dark" />
         </SafeAreaView>

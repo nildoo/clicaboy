@@ -10,6 +10,7 @@ import Home from './src/screens/Home';
 import Account from './src/screens/Account';
 import Login from './src/screens/Login';
 import Delivery from './src/screens/Delivery';
+import Wallet from './src/screens/Wallet';
 
 const Stack = createNativeStackNavigator();
 
@@ -54,6 +55,7 @@ function App() {
         <Stack.Screen name='Home' component={Home} />
         <Stack.Screen name='Account' component={Account} />
         <Stack.Screen name='Delivery' component={Delivery} />
+        <Stack.Screen name='Wallet' component={Wallet} />
       </Stack.Navigator>
     </NavigationContainer>
   );

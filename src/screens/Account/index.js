@@ -16,30 +16,33 @@ export default function Account({ navigation }) {
                     </AreaBack>
                     <Perfil>
                         <Name style={{ fontFamily: "Arboria-Bold" }}>Rodrigo da Silva {'\n'}
-                            <Ionicons name="star-sharp" size={16} color="#FFD800" /> 4.3</Name>
-                        <Photo><MaterialIcons name="account-circle" size={118} color="white" /></Photo>
+                            <Ionicons name="star-sharp" size={16} color="#FFD800" /> 4.3
+                        </Name>
+                        <Photo>
+                            <MaterialIcons name="account-circle" size={118} color="white" />
+                        </Photo>
                     </Perfil>
                 </Header>
                 <Content>
                     <Line />
-                    <TouchableOpacity onPress={()=> navigation.navigate('Delivery')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Delivery')}>
                         <Title style={{ fontFamily: "Arboria-Bold" }}>Minhas entregas</Title>
                     </TouchableOpacity>
                     <Line />
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Wallet')}>
                         <Title style={{ fontFamily: "Arboria-Bold" }}>Carteira</Title>
                     </TouchableOpacity>
                     <Line />
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Wallet')}>
                         <Title style={{ fontFamily: "Arboria-Bold" }}>Meu Perfil</Title>
                     </TouchableOpacity>
                     <Line />
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('login')}>
                         <Title style={{ fontFamily: "Arboria-Bold" }}>Sair</Title>
                     </TouchableOpacity>
                 </Content>
                 <ImageBottom>
-                    <ImageBackground source={require('../../assets/image/cidade_menu_roxo.png')} style={{width: 440, height: 201}} />
+                    <ImageBackground source={require('../../assets/image/cidade_menu_roxo.png')} style={{ width: 440, height: 201 }} />
                 </ImageBottom>
             </Container>
             <StatusBar style="light" />
