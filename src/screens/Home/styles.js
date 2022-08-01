@@ -1,11 +1,20 @@
 import React from "react";
 import styled from 'styled-components/native';
 
-export const Header = styled.View`
-    display: flex;
-    background: white;
+export const Container = styled.View`
     width: 100%;
 `
+export const Header = styled.View`
+    flex-direction: row;
+    justify-content: space-around;
+`
 export const MiniMenu = styled.View`
-    display: flex;
+    width: 50%;
+`
+export const Bars = styled.TouchableOpacity`
+    position: absolute;
+    width: 40px;
+    left: 20px;
+    top: 50px;
+    z-index: 999;
 `

@@ -14,7 +14,8 @@ export default function Login({ navigation }) {
     const [hide, setHide] = useState(true);
 
     return (
-        <KeyboardAvoidingView style={{ flex: 1, alignItems: 'center', backgroundColor: Colors.blueScreen }}>
+        <KeyboardAvoidingView style={{ flex: 1, alignItems: 'center', backgroundColor: Colors.blueScreen }}
+        enabled={Platform.OS === "ios"} behavior='padding'>
             <Header>
                 <Logo source={require('../../assets/image/logo-splash.png')} />
             </Header>

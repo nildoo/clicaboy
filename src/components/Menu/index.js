@@ -1,5 +1,5 @@
 import React from "react";
-import { ActivityIndicator } from "react-native";
+import { ActivityIndicator, View } from "react-native";
 import styled from 'styled-components/native';
 import { Ionicons  } from '@expo/vector-icons';
 import { Colors } from "../../constants/Colors";
@@ -23,7 +23,9 @@ export default function Menu({ text, onPress, loading, icon, color }) {
 }
 
 const Container = styled.View`
-  display: flex;
+  position: absolute;
+  z-index: 1;
+  top: 50px;
   width: 100%;
   align-items: center;
   padding: 5px 0;

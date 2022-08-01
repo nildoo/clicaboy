@@ -3,12 +3,24 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useFonts } from 'expo-font';
+import * as TaskManager from 'expo-task-manager';
+import * as Location from 'expo-location';
 
 import Home from './src/screens/Home';
-import Contact from './src/screens/Contact';
+import Account from './src/screens/Account';
 import Login from './src/screens/Login';
+import Delivery from './src/screens/Delivery';
 
 const Stack = createNativeStackNavigator();
+
+TaskManager.defineTask('updateLocation', ({ data: { locations }, error }) => {
+  if (error) {
+      console.log(error) ;
+      return;
+  }
+  console.log('Received new locations', locations);
+});
+
 
 function App() {
 
@@ -27,6 +39,10 @@ function App() {
     'Arboria-ThinItalic': require('./src/assets/fonts/Arboria-ThinItalic.ttf'),
   })
 
+  if(!loaded){
+    return null
+  }
+
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -36,7 +52,8 @@ function App() {
       >
         <Stack.Screen name='Login' component={Login} />
         <Stack.Screen name='Home' component={Home} />
-        <Stack.Screen name='Contact' component={Contact} />
+        <Stack.Screen name='Account' component={Account} />
+        <Stack.Screen name='Delivery' component={Delivery} />
       </Stack.Navigator>
     </NavigationContainer>
   );
