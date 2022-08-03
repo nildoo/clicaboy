@@ -1,12 +1,12 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView, View, Text } from "react-native";
-import { Container, Content, AreaIndentifier, Photo, PhotoPerfil, AreaUser, Hello, User, ImagemTop, RNCamera, AreaButton, Imagem, Description } from './styles';
+import { Container, Content, AreaIndentifier, Photo, Vehicle, PhotoPerfil, AreaUser, Hello, User, ImagemTop, AreaButton, Imagem, Description } from './styles';
 import { Colors } from "../../../constants/Colors";
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import ButtonCad from "../../../components/ButtonCad";
+import Tag from '../../../components/Tag';
 
-export default function StepOne({navigation}) {
+export default function StepTwo({ navigation }) {
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: Colors.white }}>
@@ -15,7 +15,7 @@ export default function StepOne({navigation}) {
                 <Content>
                     <AreaIndentifier>
                         <Photo>
-                            <MaterialCommunityIcons name="camera-plus" size={32} color="gray" />
+                            <PhotoPerfil source={require('../../../assets/image/images.jpg')} />
                         </Photo>
                         <AreaUser>
                             <Hello style={{ fontFamily: "Arboria-Book" }}>Seja Bem vindo,</Hello>
@@ -26,22 +26,20 @@ export default function StepOne({navigation}) {
                         Para dar continuidade ao processo de cadastro, será necessário enviar documentos para análise do ClicaBoy.
                     </Description>
                     <Description style={{ fontFamily: "Arboria-Book" }}>
-                        Basta seguir o passo a passo para continuar seu csadastro.
+                        Basta seguir o passo a passo para continuar seu cadastro.
                     </Description>
                     <Description style={{ fontFamily: "Arboria-Black" }}>
-                        Foto Perfil
+                        Tipo de Veículo
                     </Description>
                     <Description style={{ fontFamily: "Arboria-Book" }}>
-                        Insira uma foto que será exibida no seu perfil. Esta foto deve ser sem óculos e/ou capacete.
-                        Seu rosto deve estar amostra.
+                        Escolha como você irá fazer o transporte dos alimentos ou entregas.
                     </Description>
-                    <RNCamera>
-                        <PhotoPerfil>
-                            <MaterialCommunityIcons name="camera-plus" size={32} color="#bbb" />
-                        </PhotoPerfil>
-                    </RNCamera>
-                    <AreaButton>
-                        <ButtonCad icon="arrow-circle-right" text="PRÓXIMO" background={Colors.blueScreen} color={Colors.white} onPress={() => navigation.navigate('StepTwo')} />
+                    <View style={{marginTop: 30}}>
+                        <Tag text="Bicileta" color={Colors.blueStrong} />
+                        <Tag text="Moto" color={Colors.blueStrong} />
+                    </View>
+                    <AreaButton style={{ marginTop: 40 }}>
+                        <ButtonCad icon="arrow-circle-right" text="PRÓXIMO" background={Colors.blueScreen} color={Colors.white} onPress={() => navigation.navigate('StepTree')} />
                     </AreaButton>
                 </Content>
             </Container>

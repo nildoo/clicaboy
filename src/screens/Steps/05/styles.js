@@ -34,36 +34,48 @@ export const Photo = styled.View`
     justify-content: center;
 `
 export const Imagem = styled.Image`
-  height: 150px;
-  width: 100%;
-  background: transparent;
+    height: 150px;
+    width: 100%;
+    background: transparent;
 `
 export const ImagemTop = styled.Image`
-  width: 100%;
-  height: 170px;
+    width: 100%;
+    height: 170px;
+`
+export const H1 = styled.Text`
+    font-size: 24px;
+    color: ${Colors.blueStrong};
+    text-align: center;
 `
 export const Description = styled.Text`
     text-align: justify;
     padding: 8px 5px;
     color: ${Colors.blueStrong};
- `
- export const RNCamera = styled.View`
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
- `
- export const PhotoPerfil = styled.View`
-    width: 120px;
-    height: 120px;
-    background: ${Colors.boxCard};
-    border-radius: 60px;
-    align-items: center;
-    justify-content: center;
+    font-size: 16px;
  `
  export const AreaButton = styled.View`
     padding: 0 90px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+`
+export const PhotoPerfil = styled.Image`
+    height: 90px;
+    width: 90px;
+    background: transparent;
+    border-radius: 45px;
+`
+export const RNCamera = styled.View`
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 50px 0;
+`
+export const Perfil = styled.View`
+    width: 180px;
+    height: 180px;
+    background: ${Colors.boxGreen};
+    border-radius: 90px;
+    align-items: center;
+    justify-content: center;
 `

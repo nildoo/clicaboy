@@ -14,6 +14,10 @@ import Wallet from './src/screens/Wallet';
 import Perfil from './src/screens/Perfil';
 import Support from './src/screens/Support';
 import StepOne from './src/screens/Steps/01';
+import StepTwo from './src/screens/Steps/02';
+import StepTree from './src/screens/Steps/03';
+import StepFour from './src/screens/Steps/04';
+import Five from './src/screens/Steps/05';
 
 const Stack = createNativeStackNavigator();
 
@@ -62,6 +66,10 @@ function App() {
         <Stack.Screen name='Perfil' component={Perfil} />
         <Stack.Screen name='Support' component={Support} />
         <Stack.Screen name='StepOne' component={StepOne} />
+        <Stack.Screen name='StepTwo' component={StepTwo} />
+        <Stack.Screen name='StepTree' component={StepTree} />
+        <Stack.Screen name='StepFour' component={StepFour} />
+        <Stack.Screen name='Five' component={Five} />
       </Stack.Navigator>
     </NavigationContainer>
   );

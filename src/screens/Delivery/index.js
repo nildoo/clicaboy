@@ -1,7 +1,7 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, ScrollView, View, Text, Image } from "react-native";
-import { Container, Header, Bars, LabelPage, Title, Content, Imagem } from "./styles";
+import { SafeAreaView, ScrollView } from "react-native";
+import { Container, Header, Bars, LabelPage, Title, Imagem } from "./styles";
 import { Colors } from "../../constants/Colors";
 import CardDelivery from "../../components/Card";
 import { AntDesign } from '@expo/vector-icons';
