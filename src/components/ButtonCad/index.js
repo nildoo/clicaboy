@@ -1,42 +1,47 @@
 import React from 'react';
 import { ActivityIndicator } from "react-native";
 import styled from 'styled-components/native';
+import { Colors } from '../../constants/Colors';
+import { FontAwesome } from '@expo/vector-icons';
 
-export default function ButtonCad({ text, onPress, loading }) {
+export default function ButtonCad({ text, onPress, loading, background, color, icon }) {
 
   return (
-    <ContainerBottom>
-      <Touchable disabled={loading} onPress={onPress}>
-        {loading ? (
-          <ActivityIndicator color='#FFFF' size='large' />
-        ) : (
-          <ButtonText style={{fontFamily: 'Arboria-Medium'}}>{text}</ButtonText>
-        )}
+    <Container>
+      <Touchable disabled={loading} onPress={onPress} style={{ backgroundColor: background }}>
+        <InputField>
+          <InputIcon>
+            <FontAwesome name={icon} size={18} color={Colors.white} />
+          </InputIcon>
+          <ButtonText style={{ color: color, fontFamily: "Arboria-Bold" }}>   {text}</ButtonText>
+        </InputField>
       </Touchable>
-    </ContainerBottom>
+    </Container>
   )
 }
 
-const ContainerBottom = styled.View`
-  flex: 1;
+const Container = styled.View`
+  display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  width: 100%;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 `
-
 const Touchable = styled.TouchableOpacity`
   display: flex;
-  width: 80%;
+  width: 100%;
   height: 50px;
-  background-color: #fee6e6;
-  border-radius: 20px;
+  border-radius: 18px;
   align-items: center;
   justify-content: center;
 `
-
 const ButtonText = styled.Text`
   font-size: 14px;
-  color: #bb0000;
-  text-transform: uppercase;
+`
+const InputField = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`
+const InputIcon = styled.View`
 `

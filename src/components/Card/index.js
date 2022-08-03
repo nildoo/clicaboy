@@ -18,8 +18,8 @@ export default function CardDelivery() {
                     <Ionicons name="star-sharp" size={16} color="#FFD800" /> 4
                 </Star>
                 <Price>R$ 28,00</Price>
-                <Label style={{fontFamily: "Arboria-Bold", color: "#000"}}>Data Entrega</Label>
-                <Data style={{fontFamily: "Arboria-Bold", color: "#000"}}>01/08/2022 13:35</Data>
+                <Label style={{ fontFamily: "Arboria-Bold", color: "#000" }}>Data Entrega</Label>
+                <Data style={{ fontFamily: "Arboria-Bold", color: "#000" }}>01/08/2022 13:35</Data>
             </Description>
         </Canvas>
     )

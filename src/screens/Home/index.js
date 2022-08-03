@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, View, Text, Dimensions, StyleSheet } from "react-native";
-import { Container, Header, MiniMenu, Bars } from "./styles";
+import { Container, Header, MiniMenu, Bars, AreaBottom } from "./styles";
 import MapView, { Marker, MarkerProps, Heatmap } from 'react-native-maps';
 import * as Location from 'expo-location';
 import { Colors } from "../../constants/Colors";
 import Menu from "../../components/Menu";
 import { Octicons } from '@expo/vector-icons';
+import ButtonCad from "../../components/ButtonCad";
 
 export default function Home({ navigation }) {
 
@@ -69,8 +70,12 @@ export default function Home({ navigation }) {
                     </Container>
                     : null
                 }
+                <AreaBottom>
+                    <ButtonCad text="Preciso de suporte" background={Colors.buttonRed} color={Colors.white} onPress={()=> navigation.navigate('Support')} />
+                    <ButtonCad text="Cheguei" background={Colors.greenClean} color={Colors.blueStrong} />
+                </AreaBottom>
             </Container>
-            <StatusBar style="light" />
+            <StatusBar style="dark" />
         </SafeAreaView>
     )
 }

@@ -28,11 +28,6 @@ export const Title = styled.Text`
 export const Bottom = styled.View`
     flex: 1;
 `
-export const ImageBottom = styled.View`
-    width: 100%;
-    align-items: center;
-    justify-content: space-around;
-`
 export const Content = styled.View`
   flex: 1;
 `

@@ -28,11 +28,18 @@ export const Name = styled.Text`
     line-height: 23px;
 `
 export const Photo = styled.View`
-    width: 118px;
-    height: 118px;
+    height: 145px;
+    width: 145px;
     background: #cdcdcd;
-    border-radius: 60px;
-
+    border-radius: 72px;
+    align-items: center;
+    justify-content: center;
+`
+export const PhotoPerfil = styled.Image`
+  height: 140px;
+  width: 140px;
+  background: transparent;
+  border-radius: 70px;
 `
 export const Content = styled.View`
     display: flex;

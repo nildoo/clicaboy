@@ -7,5 +7,7 @@ export const Colors = {
     redSupport: "#CE0B0B",
     inputIcon: "#B9A8CD",
     boxCard: "#e9e9e9",
-    white: "#fff"
+    boxGreen: "#9DD544",
+    white: "#fff",
+    buttonRed: "#C11717"
 }

@@ -32,7 +32,7 @@ export default function Login({ navigation }) {
                 </AreaButton>
                 <Account>
                     <Button text="Esqueci minha senha" background={Colors.blueStrong} color={Colors.white} />
-                    <Button text="Quero me cadastrar" background={Colors.white} color={Colors.blueStrong} />
+                    <Button text="Quero me cadastrar" background={Colors.white} color={Colors.blueStrong} onPress={()=> navigation.navigate('StepOne')} />
                 </Account>
                 <AreaText>
                     <Terms>

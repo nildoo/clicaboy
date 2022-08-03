@@ -18,3 +18,10 @@ export const Bars = styled.TouchableOpacity`
     top: 50px;
     z-index: 999;
 `
+export const AreaBottom = styled.View`
+    background: transparent;
+    width: 100%;
+    bottom: 10px;
+    padding: 0 80px;
+    position: absolute;
+`

@@ -1,9 +1,9 @@
 import React from "react";
-import { StatusBar } from "react-native";
+import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, ScrollView, View, Text } from "react-native";
 import { Container, Header, Bars, LabelPage, Title, Balance, SideLeft, SideRight, Content, Imagem } from "./styles";
 import { Colors } from "../../constants/Colors";
-import CardDelivery from "../../components/Card";
+import CardWallet from "../../components/CardWallet";
 import { AntDesign, FontAwesome } from '@expo/vector-icons';
 
 export default function Wallet({ navigation }) {
@@ -30,7 +30,16 @@ export default function Wallet({ navigation }) {
                     </SideRight>
                 </Balance>
                 <ScrollView showsVerticalScrollIndicator={false}>
-
+                    <CardWallet />
+                    <CardWallet />
+                    <CardWallet />
+                    <CardWallet />
+                    <CardWallet />
+                    <CardWallet />
+                    <CardWallet />
+                    <CardWallet />
+                    <CardWallet />
+                    <CardWallet />
                 </ScrollView>
                 <Imagem source={require('../../assets/image/city-bike.png')} />
             </Container>

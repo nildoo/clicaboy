@@ -1,7 +1,7 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView, View, Text, TouchableOpacity, ImageBackground } from "react-native";
-import { Container, Header, AreaBack, Perfil, Name, Photo, Content, Line, Title, ImageBottom } from "./styles";
+import { Container, Header, AreaBack, Perfil, Name, Photo, PhotoPerfil, Content, Line, Title, ImageBottom } from "./styles";
 import { Colors } from "../../constants/Colors";
 import { AntDesign, Ionicons, MaterialIcons } from '@expo/vector-icons';
 
@@ -19,7 +19,7 @@ export default function Account({ navigation }) {
                             <Ionicons name="star-sharp" size={16} color="#FFD800" /> 4.3
                         </Name>
                         <Photo>
-                            <MaterialIcons name="account-circle" size={118} color="white" />
+                            <PhotoPerfil source={require('../../assets/image/images.jpg')} />
                         </Photo>
                     </Perfil>
                 </Header>
@@ -33,11 +33,11 @@ export default function Account({ navigation }) {
                         <Title style={{ fontFamily: "Arboria-Bold" }}>Carteira</Title>
                     </TouchableOpacity>
                     <Line />
-                    <TouchableOpacity onPress={() => navigation.navigate('Wallet')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Perfil')}>
                         <Title style={{ fontFamily: "Arboria-Bold" }}>Meu Perfil</Title>
                     </TouchableOpacity>
                     <Line />
-                    <TouchableOpacity onPress={() => navigation.navigate('login')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                         <Title style={{ fontFamily: "Arboria-Bold" }}>Sair</Title>
                     </TouchableOpacity>
                 </Content>

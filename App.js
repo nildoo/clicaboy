@@ -11,6 +11,9 @@ import Account from './src/screens/Account';
 import Login from './src/screens/Login';
 import Delivery from './src/screens/Delivery';
 import Wallet from './src/screens/Wallet';
+import Perfil from './src/screens/Perfil';
+import Support from './src/screens/Support';
+import StepOne from './src/screens/Steps/01';
 
 const Stack = createNativeStackNavigator();
 
@@ -56,6 +59,9 @@ function App() {
         <Stack.Screen name='Account' component={Account} />
         <Stack.Screen name='Delivery' component={Delivery} />
         <Stack.Screen name='Wallet' component={Wallet} />
+        <Stack.Screen name='Perfil' component={Perfil} />
+        <Stack.Screen name='Support' component={Support} />
+        <Stack.Screen name='StepOne' component={StepOne} />
       </Stack.Navigator>
     </NavigationContainer>
   );
